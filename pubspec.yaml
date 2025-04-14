@@ -22,8 +22,8 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
-    - assets/banners
-    - assets/categories
-    - assets/dishes
-    - assets/others
-    - assets/restaurants
+    - assets/banners/
+    - assets/categories/
+    - assets/dishes/
+    - assets/others/
+    - assets/restaurants/
