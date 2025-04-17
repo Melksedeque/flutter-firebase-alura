@@ -17,9 +17,9 @@ class CheckoutScreen extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 8.0),
           child: Container(
             decoration: BoxDecoration(
-              color: AppColors.backgroundDangerColor,
+              color: AppColors.backgroundWarningColor,
               border: Border.all(
-                color: AppColors.borderDangerColor,
+                color: AppColors.borderWarningColor,
                 width: 2.0,
               ),
               borderRadius: BorderRadius.circular(12.0),
@@ -32,7 +32,7 @@ class CheckoutScreen extends StatelessWidget {
                   child: Text(
                     "Sua sacola está vazia",
                     style: TextStyle(
-                      color: AppColors.textDangerColor,
+                      color: AppColors.textWarningColor,
                       fontSize: 14.0,
                     ),
                   ),
