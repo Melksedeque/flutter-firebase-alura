@@ -16,6 +16,11 @@ void main() async {
             return restaurantData;
           },
         ),
+        ChangeNotifierProvider(
+          create: (context) {
+            return bagData;
+          },
+        )
       ],
       child: MyApp(),
     ),
