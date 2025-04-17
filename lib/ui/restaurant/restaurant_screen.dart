@@ -26,6 +26,7 @@ class RestaurantScreen extends StatelessWidget {
                 return ListTile(
                   leading: Image.asset(
                     'assets/dishes/default.png',
+                    height: 48.0,
                     width: 48.0,
                   ),
                   title: Text(dish.name),
