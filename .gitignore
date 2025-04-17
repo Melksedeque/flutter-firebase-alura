@@ -47,5 +47,8 @@ app.*.map.json
 # Arquivos de Texto
 *.txt
 
-# Pastas de consulta
+# Arqivos de Meta Dados
+*.metadata
+
+# Pastas de de Referencia
 /_OriginalProject
