@@ -12,7 +12,14 @@ class CheckoutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Sacola"),
-        actions: [TextButton(onPressed: () {}, child: Text("Limpar"))],
+        actions: [
+          TextButton(
+            onPressed: () {
+              bagProvider.clearBag();
+            },
+            child: Text("Limpar"),
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
