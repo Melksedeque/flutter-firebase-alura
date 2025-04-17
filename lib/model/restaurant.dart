@@ -1,3 +1,5 @@
+import 'package:myapp/model/dish.dart';
+
 class Restaurant {
   String id;
   String imagePath;
