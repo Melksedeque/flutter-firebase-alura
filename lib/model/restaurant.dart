@@ -49,6 +49,6 @@ class Restaurant {
 
   @override
   String toString() {
-    return 'Restaurant{id: $id, imagePath: $imagePath, name: $name, description: $description, stars: $stars, distance: $distance, categories: $categories}';
+    return 'Restaurant{id: $id, imagePath: $imagePath, name: $name, description: $description, stars: $stars, distance: $distance, categories: $categories}, dishes: $dishes}';
   }
 }
