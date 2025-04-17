@@ -1,6 +1,6 @@
 {
-    "name": "flutter_techtaste",
-    "short_name": "flutter_techtaste",
+    "name": "myapp",
+    "short_name": "myapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
