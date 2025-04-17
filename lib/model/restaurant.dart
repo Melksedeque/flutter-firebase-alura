@@ -6,6 +6,7 @@ class Restaurant {
   double stars;
   int distance;
   List<String> categories;
+  List<Dish> dishes;
 
   Restaurant({
     required this.id,
@@ -15,6 +16,7 @@ class Restaurant {
     required this.stars,
     required this.distance,
     required this.categories,
+    required this.dishes,
   });
 
   Map<String, dynamic> toMap() {
@@ -26,6 +28,7 @@ class Restaurant {
       'stars': stars,
       'distance': distance,
       'categories': categories,
+      'dishes': dishes.map((dish) => dish.toMap()).toList(),
     };
   }
 
@@ -38,6 +41,7 @@ class Restaurant {
       stars: map['stars'],
       distance: map['distance'],
       categories: List<String>.from(map['categories']),
+      dishes: List<Dish>.from(map['dishes'].map((dish) => Dish.fromMap(dish))),
     );
   }
 
