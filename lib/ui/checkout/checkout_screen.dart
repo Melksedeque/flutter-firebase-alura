@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/model/dish.dart';
+import 'package:myapp/ui/_core/app_colors.dart';
 import 'package:myapp/ui/_core/bag_provider.dart';
 import 'package:provider/provider.dart' show Provider;
 
@@ -9,6 +10,39 @@ class CheckoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     BagProvider bagProvider = Provider.of<BagProvider>(context);
+    if (bagProvider.dishesOnBag.isEmpty) {
+      return Scaffold(
+        appBar: AppBar(title: Text("Sacola")),
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8.0),
+          child: Container(
+            decoration: BoxDecoration(
+              color: AppColors.backgroundDangerColor,
+              border: Border.all(
+                color: AppColors.borderDangerColor,
+                width: 2.0,
+              ),
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Text(
+                    "Sua sacola está vazia",
+                    style: TextStyle(
+                      color: AppColors.textDangerColor,
+                      fontSize: 14.0,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      );
+    }
     return Scaffold(
       appBar: AppBar(
         title: Text("Sacola"),
@@ -25,8 +59,9 @@ class CheckoutScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 8.0),
         child: SingleChildScrollView(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Text("Pedidos"),
+              Text("Pedidos", textAlign: TextAlign.center),
               Column(
                 children: List.generate(
                   bagProvider.getMapByAmount().keys.length,
