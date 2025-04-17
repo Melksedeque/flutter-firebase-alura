@@ -31,6 +31,7 @@ class RestaurantScreen extends StatelessWidget {
                   ),
                   title: Text(dish.name),
                   subtitle: Text("R\$${dish.price.toStringAsFixed(2)}"),
+                  trailing: IconButton(onPressed: () {}, icon: Icon(Icons.add)),
                 );
               }),
             ),
